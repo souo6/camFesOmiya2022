@@ -1,0 +1,366 @@
+/*枠組み用css*/
+body{
+    margin: 0;
+    height: 100%;
+}
+/* 背景 */
+/* ぼかし量を変数で指定 */
+:root {
+    --blur-background: 20px;
+}
+div.background {
+    position: fixed;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+}
+div.backImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: background-loop 16s linear infinite;
+}
+@keyframes background-loop {
+    0% {opacity: 0;}
+    5%,25% {opacity: 1;}
+    30%,100% {opacity: 0;}
+}
+.backImage:nth-child(1) {
+    background-image: url(../image/background_img1.JPG);
+    animation-delay: 0s;
+}
+.backImage:nth-child(2) {
+    background-image: url(../image/background_img2.png);
+    animation-delay: 4s;
+}
+.backImage:nth-child(3) {
+    background-image: url(../image/background_img3.jpg);
+    animation-delay: 8s;
+}
+.backImage:nth-child(4) {
+    background-image: url(../image/background_img4.JPG);
+    animation-delay: 12s;
+}
+.backImage::before {
+    content: '';
+    background: inherit;
+    filter: blur(var(--blur-background));
+    position: absolute;
+    top: calc(var(--blur-background) * -1);
+    left: calc(var(--blur-background) * -1);
+    width: calc(100vw + calc(var(--blur-background) * 2));
+    height: calc(100vh + calc(var(--blur-background) * 2));
+    z-index: -9;
+}
+/*草の画像*/
+.gras_left{
+    z-index: 2;
+    position: fixed;
+    width: 180px;
+    top: 45px;
+}
+.gras_right{
+    z-index: 2;
+    right: 0;
+    position: fixed;
+    width: 180px;
+    transform: scale(-1, 1);
+    top: 45px;
+    }
+/*ヘッダー 共通部分 */
+#header{
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(../image/wave_mask.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top:0;
+    z-index: 55;
+}
+#header li {
+    text-align: center;
+    list-style: none;
+}
+.header_nav_left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    font-size: 20px;
+}
+.header_nav_left a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+    outline: none;
+    padding:13px 0;
+}
+.btn_hide{
+    display: none;
+}
+/* フッター 共通部分*/
+.footer_about{
+    background-color: #fffdf5e1;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.footer_img{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: -15px;
+}
+.footer_img_left{
+    width: 230px;
+}
+.footer_img_right{
+    width: 200px;
+}
+.footer_msg{
+    background-color: #39322f;
+    color:white;
+    font-size:22px;
+    width: 100%;
+    margin: 0;
+}
+
+/* PC用レイアウト */
+@media screen and (min-width:960px){
+    .header_nav_right{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 40px;
+        font-size: 18px;
+    }
+    .header_nav_right li{
+        margin: 0 25px;
+    }
+    .header_nav_right a{
+        text-decoration: none;
+        color: rgb(72, 72, 72);
+        outline: none;
+        padding:13px 0;
+        transition: 1.0s;
+    }
+    .header_nav_right a:hover{
+        color:rgb(102, 164, 80);
+    }
+}
+
+/* スマホ・タブレット用スタイル */
+/* SE二世代より大きいサイズにスマホ、タブレットを想定したレイアウトです。 */
+@media only screen and (max-width:959px) and (min-width:415px){
+    /*ヘッダー*/
+    .header_nav_right{
+        background-image: url(../image/btn_menu_img.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: -100%;
+        z-index: +1;
+        padding:70px 0 0 0;
+        margin: 0;
+        transition: all 0.5s;
+    }
+    .header_nav_right li{
+        font-size:20px;
+        margin: 0 20px;
+    }
+    
+    .header_nav_right a{
+        border-bottom: solid 1px #000;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        outline: none;
+        padding: 20px 0;
+    }
+    .header_nav_right a:hover{
+        background-color: #000;
+        color: #FFF;
+    }
+    
+    .header_nav_btn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: #ffffff00;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .header_nav_btn span,
+    .header_nav_btn span:before,
+    .header_nav_btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #000000;
+        position: absolute;
+        -webkit-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+    }
+    .header_nav_btn span:before{
+        bottom:8px;
+    }
+    .header_nav_btn span:after{
+        top:8px;
+    }
+    #toggle:checked ~ .header_nav_btn span{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #toggle:checked + .header_nav_btn span::before{
+        bottom:0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    #toggle:checked + .header_nav_btn span::after{
+        top:0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    #toggle:checked ~ .header_nav_right{
+        right:0;
+    }
+}
+/* スマホ用スタイル */
+/* iPhoneSE二世代目より下のサイズを想定したレイアウトです。 */
+@media screen and (max-width:414px){
+    /*草の画像*/
+    .gras_left{
+        width: 120px;
+    }
+    .gras_right{
+        width: 120px;
+    }
+    /*ヘッダー*/
+    .header_nav_left{
+        font-size: 16px;
+    }
+    .header_nav_right{
+        background-color: #FFF;
+        background-image: url(../image/btn_menu_img.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: -100%;
+        z-index: +1;
+        padding:50px 0 0 0;
+        margin: 0;
+        transition: all 0.5s;
+    }
+    .header_nav_right li{
+        font-size:16px;
+        margin: 0 20px;
+    }
+    
+    .header_nav_right a{
+        border-bottom: solid 1px #000;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        outline: none;
+        padding: 15px 0;
+    }
+    .header_nav_right a:hover{
+        background-color: #000;
+        color: #FFF;
+    }
+    
+    .header_nav_btn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: #ffffff00;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .header_nav_btn span,
+    .header_nav_btn span:before,
+    .header_nav_btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #000000;
+        position: absolute;
+        -webkit-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+    }
+    .header_nav_btn span:before{
+        bottom:8px;
+    }
+    .header_nav_btn span:after{
+        top:8px;
+    }
+    #toggle:checked ~ .header_nav_btn span{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #toggle:checked + .header_nav_btn span::before{
+        bottom:0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    #toggle:checked + .header_nav_btn span::after{
+        top:0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    #toggle:checked ~ .header_nav_right{
+        right:0;
+    }
+    /* フッター */
+    .footer_img{
+        margin-bottom: -7px;
+    }
+    .footer_img_left{
+        width: 120px;
+    }
+    .footer_img_right{
+        width: 120px;
+    }
+    .footer_msg{
+        font-size:18px;
+    }
+}

@@ -1,0 +1,70 @@
+/*仮のデザイン・内容です。*/
+/*ページごとの本文のデザインなどはお任せします。*/
+
+/* 共通レイアウト */
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title_msg{
+    color: white;
+    font-weight: bold;
+    width: 400px;
+    text-align: center;
+    font-size: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.subTitle{
+    font-size:28px;
+}
+
+.about{
+    background-color: rgb(255, 255, 253);
+    border: solid 10px #5f7037;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 15px;
+}
+.about_title{
+    border-bottom: solid 2px #000;
+    color: rgb(0, 0, 0);
+    width: 90px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+.about_msg{
+    padding: 10px 20px;
+    font-size: 19px;
+}
+.about2{
+    background-color: rgba(63, 62, 60, 0.853);
+    height: 350px;
+    width: 100%;
+    margin: 40px 0;
+}
+.about2_msg{
+   color: white;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   font-size: 20px;
+}
+
+/* PC用レイアウト */
+@media screen and (min-width:960px){
+}
+/* スマホ・タブレット用スタイル */
+/* SE二世代より大きいサイズにスマホ、タブレットを想定したレイアウトです。 */
+@media only screen and (max-width:959px) and (min-width:415px){
+}
+/* スマホ用スタイル */
+/* iPhoneSE二世代目より下のサイズを想定したレイアウトです。 */
+@media screen and (max-width:414px){
+}

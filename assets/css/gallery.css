@@ -1,0 +1,152 @@
+
+.accordion{
+    background-color: #fffffd;
+    border: solid 10px #5f7037;
+    border-radius: 10px;
+    margin-bottom: 45px;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.accordion_content_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:30px 0;
+}
+.column{
+    flex-direction: column;
+}
+.accordion_content_border{
+    border-bottom:solid 3px #5f7037;
+    margin: 0 30px;
+}
+.accordion_content_msg{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 15px;
+    width: 30%;
+}
+.accordion_content_msg_column{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 15px;
+    width: 70%;
+}
+.accordion_content_msg h1,
+.accordion_content_msg h2,
+.accordion_content_msg h3,
+.accordion_content_msg h4{
+    color:#000;
+    border-bottom:solid 2px #000;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.author{
+    font-size: 18px;
+}
+.accordion_content_msg p{
+    margin:1em 0;
+}
+.accordion_content_box img{
+    object-fit: cover;
+    margin: 0 15px;
+}
+.img_size1{
+    width: 50%;
+}
+.img_size2{
+    width: 70%;
+}
+.img_size3{
+    width: 90%;
+}
+.accordion_content_box iframe{
+    width: 560px;
+    margin: 0 15px;
+}
+.accordion_title{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height:80px;
+    background: linear-gradient(#fffffd24,#d9dcd9);
+    z-index: 1;
+}
+.accordion_bar{
+    position: absolute;
+    right: 45%;
+    bottom:20px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-right: 5px solid #666;
+    border-bottom: 5px solid #666;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.accordion_title.is-active .accordion_bar{
+    transform: rotate(225deg);
+    bottom:0;
+}
+.accordion_content {
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: .3s;
+  }
+  
+  .accordion_content.is-open {
+    line-height: normal; /* numberに書き換える*/
+    height: auto;
+    opacity: 1;
+  }
+
+  /* PC用レイアウト */
+@media screen and (min-width:960px){
+    .accordion_content_box{
+    justify-content: center;
+    }
+}
+/* スマホ・タブレット用スタイル */
+/* SE二世代より大きいサイズにスマホ、タブレットを想定したレイアウトです。 */
+@media only screen and (max-width:959px) and (min-width:415px){
+    .accordion{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .accordion_content_box{
+        flex-direction: column;
+    }
+    .accordion_content_msg{
+        width: 70%;
+    }
+    .img_size1{
+        width: 90%;
+    }
+    .img_size2{
+        width: 95%;
+    }
+    .img_size3{
+        width: 98%;
+    }
+    .accordion_content_box iframe{
+        width: 80%;
+    }
+    .accordion_content_msg h1,
+    .accordion_content_msg h2,
+    .accordion_content_msg h3,
+    .accordion_content_msg h4{
+        margin-top: 15px;
+    }
+}
+/* スマホ用スタイル */
+/* iPhoneSE二世代目より下のサイズを想定したレイアウトです。 */
+@media screen and (max-width:414px){
+}

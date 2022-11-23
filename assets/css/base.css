@@ -60,20 +60,18 @@ div.backImage {
     z-index: -9;
 }
 /*草の画像*/
-.gras_left{
+.gras_left ,
+.gras_right {
     z-index: 2;
     position: fixed;
     width: 180px;
     top: 45px;
+    pointer-events: none;
 }
 .gras_right{
-    z-index: 2;
     right: 0;
-    position: fixed;
-    width: 180px;
     transform: scale(-1, 1);
-    top: 45px;
-    }
+}
 /*ヘッダー 共通部分 */
 #header{
     background-color: rgba(255, 255, 255, 0);

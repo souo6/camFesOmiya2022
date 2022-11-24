@@ -116,6 +116,11 @@ div.backImage {
     object-fit: cover;
     width: 120px;
 }
+.header_logo2 img{
+    object-fit: cover;
+    width: 100px;
+    margin-bottom: 5px;
+}
 /* フッター 共通部分*/
 .footer_about{
     background-color: #fffdf5e1;

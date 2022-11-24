@@ -1,0 +1,22 @@
+.update-note {
+    table-layout: fixed;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.update-note tr > td:first-child {
+    width: 30%;
+}
+.update-note tr > td:last-child {
+    width: 70%;
+    text-align: left;
+}
+.update-note tr {
+    border-bottom:1px #222 solid;
+}
+.update-note tr:first-child {
+    border-top:1px #222 solid;
+}
+.update-note td {
+    padding: 4px 0;
+}

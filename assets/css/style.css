@@ -143,10 +143,25 @@ div[column] div.main{
     .about div.main h2,
     .about div.main h3,
     .about div.main h4{
-        margin: 0 25%;
+        margin: 0 22%;
     }
 }
 /* スマホ用スタイル */
 /* iPhoneSE二世代目より下のサイズを想定したレイアウトです。 */
 @media screen and (max-width:414px){
+        .about div[column]{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .about div.main h1,
+    .about div.main h2,
+    .about div.main h3,
+    .about div.main h4{
+        margin: 0 15%;
+    }
+    .about div[column]>div:last-child{
+        margin-top: 30px;
+    }
 }

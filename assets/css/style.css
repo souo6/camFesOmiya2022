@@ -139,6 +139,12 @@ div[column] div.main{
 /* スマホ・タブレット用スタイル */
 /* SE二世代より大きいサイズにスマホ、タブレットを想定したレイアウトです。 */
 @media only screen and (max-width:959px) and (min-width:415px){
+    .about div.main h1,
+    .about div.main h2,
+    .about div.main h3,
+    .about div.main h4{
+        margin: 0 25%;
+    }
 }
 /* スマホ用スタイル */
 /* iPhoneSE二世代目より下のサイズを想定したレイアウトです。 */

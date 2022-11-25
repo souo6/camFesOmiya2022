@@ -1,5 +1,7 @@
 .timetable{
-    width: 70%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.timetable p{
     text-align: left;
 }

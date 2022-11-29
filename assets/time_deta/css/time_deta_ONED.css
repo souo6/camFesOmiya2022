@@ -1,0 +1,60 @@
+/*11/24番*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.oned_table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.oned_table td {
+    font-size: 20px;
+    padding: 20px 0;
+    height: 40px;
+}
+.oned_table td:nth-child(2)::before {
+    content: "登壇者:";
+    margin-right: 10px;
+}
+tr:hover:not(.main) {
+    background-color: #eee;
+}
+.oned_table td:hover:not(.main td) {
+    height: 60px;
+}
+.time p {
+    position: relative;
+}
+.oned_table tr:hover > .time p {
+    padding-left: 15px;
+}
+.oned_table tr:hover > .time p::before {
+    position: absolute;
+    content: "";
+    background-color: #222;
+    top: 15px;
+    left: 5px;
+    width: 5px;
+    height: 40px;
+    transform: translateY(-50%)scale(1,1.5);
+}
+.oned_table tr:first-child {
+    border-top: 1px #222 solid;
+}
+.oned_table tr {
+    border-bottom: 1px #222 solid;
+}
+@media screen and (max-width:760px) {
+    .oned_table td {
+        font-size: 15px;
+    }
+    .oned_table td:nth-child(2)::before {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .oned_table td {
+        font-size: 15px;
+    }
+}

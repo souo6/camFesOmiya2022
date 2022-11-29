@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: calc(100vw - calc(100vw - 100%));
+}
+.time_table {
+    position: relative;
+    width: calc(100vw - calc(100vw - 100%));
+    height: 1000px;
+}
+.content_time {
+    position: absolute;
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+    z-index: 1;
+}
+.time {
+    width: 100%;
+    height: 46px;
+}
+.time time::after {
+    content: attr(datetime)"";
+    color: #0099FF;
+    font-size: 30px;
+    width: 50px;
+}
+.time:not(:last-child) {
+    border-top: solid 2px #00ddff;
+}
+.time:first-child {
+    margin-top: 220px;
+}
+.time:nth-child(2) {
+    margin-top: 140px;
+}
+.time:last-child {
+    margin-top: 500px;
+    border-bottom: solid 2px #00ddff;
+}
+.incense_table {
+    position: absolute;
+    width: calc(100% - 100px);
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    z-index: 2;
+}
+.incense_table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #00ddFF;
+    left: 50%;
+    margin-left: -10px;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.incense_table * {
+    position: relative;
+    text-align: center;
+    color: #fffffd;
+    font-size: 20px;
+}
+.block_time::before {
+    content: attr(first_time)"";
+}
+.block_time::after {
+    content: attr(last_time)"";
+}
+.main_content {
+    width: 100%;
+    height: 100px;
+    background-color: #00aaff;
+    z-index: 5;
+}
+.main_content .block_time{
+    padding-top: 15px;
+}
+.block {
+    margin-top: 20px;
+}
+.block_content {
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+    clip-path: polygon(10% 0,90% 0,90% 75%,50% 100%,10% 75%);
+    z-index: 5;
+}
+.block_content {
+    background-color: #00aaff;
+}
+.block_total {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    height: 100px;
+    padding-top: 20px;
+    background-color: #fffffd;
+    z-index: 4;
+}
+.block_total {
+    border: solid 5px #0066ff;
+}
+.block_total * {
+    color: #00aaff;
+}
+.end {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

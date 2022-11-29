@@ -1,0 +1,293 @@
+/*11/24番*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.time_table {
+    width: calc(100vw - calc(100vw - 100%));
+    background-color: #fffffd;
+    display: flex;
+    position: relative;
+}
+.time_table::before ,
+.time_table::after {
+    position: absolute;
+    top: 100px;
+    font-size: 40px;
+    z-index: 20;
+    background-color: #fffffd;
+    border-radius: 20px;
+}
+.time_table::before {
+    content: "A";
+    left: 100px;
+}
+.time_table::after {
+    content: "B";
+    right: 100px;
+}
+.content_time {
+    width: 10%;
+    min-width: 150px;
+}
+.time {
+    width: 100%;
+    height: 46px;
+}
+.time time::after {
+    content: attr(datetime)"";
+    color: #5f7037;
+    font-size: 30px;
+    width: 50px;
+}
+.time:not(:last-child) {
+    border-top: solid 2px #5f7037;
+}
+.time:first-child {
+    margin-top: 10px;
+}
+.time:nth-child(2) {
+    margin-top: 550px;
+}
+.time:nth-child(3) {
+    margin-top: 827px;
+}
+.time:nth-child(4) {
+    margin-top: 555px;
+}
+.time:last-child {
+    border-bottom: solid 2px #5f7037;
+    margin-top: 480px;
+    margin-bottom: 10px;
+}
+.right {
+    text-align: right;
+}
+.incense_table {
+    width: 80%;
+    position: relative;
+}
+.incense_table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #5f7037;
+    left: 50%;
+    margin-left: -10px;
+    transform: translateX(50%);
+    z-index: 1;
+}
+#top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+#top span::after {
+    content: "op";
+    margin-left: 20px;
+}
+#end {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+#end span::after {
+    content: "ED";
+    margin-left: 20px;
+}
+#main_content {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: calc(100% - 200px);
+}
+#top ,
+#end ,
+#main_content {
+    z-index: 3;
+    text-align: center;
+    font-size: 25px;
+}
+#top span::before ,
+#end span::before {
+    content: "[ "attr(time_deta)"" " ]";
+}
+.content {
+    margin-top: 20px;
+    width: 62%;
+    border: solid 10px #5f7037;
+    box-sizing: border-box;
+    background-color: #fffffd;
+    border-radius: 15px;
+}
+.content:hover {
+    width: calc(62% + 20px);
+}
+.mc_content {
+    background:#D8C8AE;
+    width: 100%;
+    color: #fffffd;
+}
+article .mc_content {
+    height: 50px;
+}
+.size_2 {
+    height: 100px;
+}
+.size_2:hover {
+    height: 120px;
+} 
+.size_3 {
+    height: 150px;
+}
+.size_3:hover {
+    height: 170px;
+} 
+.size_4 {
+    height: 200px;
+}
+.size_4:hover {
+    height: 220px;
+} 
+.content_detail {
+    text-align: center;
+
+}
+.table_title {
+    font-size: 25px;
+    position: relative;
+}
+.table_title::before {
+    margin-right: 5px;
+    content: "[ "attr(time_deta)"" " ]";
+    color: #b0bb99;
+    font-size: 25px;
+}
+.table_title span::before {
+    margin-right: 10px;
+    content: "出演者 :";
+    font-size: 20px;
+    color: #b0bb99;
+}
+.table_title::after {
+    content: "";
+    position: absolute;
+    background-color: #5f7037;
+    width: 60%;
+    height: 3px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.mc_title::before {
+    content: "[ "attr(time_deta)"" " ]";
+    margin-right: 10px;
+}
+.mc_title {
+    font-size: 25px;
+    text-align: center;
+}
+.mc_title::after {
+    margin-left: 10px;
+    content: "MC";
+}
+.Bstage {
+    margin-right: 0;
+    margin-left: auto;
+}
+article:first-child {
+    margin-top: 20px;
+}
+.table_content {
+    font-size: 20px;
+}
+.table_content::before {
+    content: "content:";
+    font-size: 15px;
+    color: #b0bb99;
+}
+.Webcast::after {
+    margin-left: 10px;
+    content: "配信有";
+    font-size: 15px;
+    color: #b0bb99;
+}
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table_title span br {
+    display: none;
+}
+.line_content {
+    width: 80%;
+}
+@media screen and (max-width:1260px) {
+    .table_title ,
+    .table_title::before {
+        font-size: 20px;
+    }
+    .content_time {
+        width: 100px;
+        min-width: 100px;
+    }
+    .time {
+        width: 100px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .incense_table {
+        width: calc(100% - 200px);
+    }
+    .line_content {
+        width: 95%;
+    }
+}
+@media screen and (max-width:900px) {
+    .table_title ,
+    .table_content {
+        font-size: 18px;
+    }
+    .table_title span br {
+        display:block;
+    }
+    .table_title::before {
+        font-size: 15px;
+    }
+    .table_title::after {
+        width: 80%;
+    }
+    .content_time {
+        min-width: 60px;
+        width: 60px;
+    }
+    .time {
+        width: 60px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 20px;
+        height: 26px;
+    }
+    .time time::after {
+        font-size: 20px;
+    }
+    .incense_table {
+        width: calc(100% - 120px);
+    }
+    .content {
+        margin-top: 20px;
+        width: 80%;
+        border: solid 10px #5f7037;
+        box-sizing: border-box;
+        background-color: #fffffd;
+        border-radius: 15px;
+    }
+    .content:hover {
+        width: calc(80% + 20px);
+    }
+}

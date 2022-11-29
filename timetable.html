@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>大宮キャンフェス2022</title>
+        <link rel="stylesheet" href="assets/css/base.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/timetable.css">
+        <script src="assets/js/timetable.js" type="text/javascript"></script>
+        <!--
+        <link rel="icon" href="assets/image/icon.ico" id="favicon">
+        -->
+    </head>
+    <body>
+        <!--背景-->
+        <div class="background">
+            <div class="backImage"></div>
+            <div class="backImage"></div>
+            <div class="backImage"></div>
+            <div class="backImage"></div>
+            <!-- 画像の数だけdiv.backImageを置く -->
+        </div>
+        <!--ヘッダー-->
+        <div id="header">
+            <!--ロゴ・タイトル-->
+            <ul class="header_nav_left">
+                <a href="index.html">
+                    <div class="header_logo"></div>
+                    <li>大宮キャンフェス2022</a>
+                </li>
+            </ul>
+            <!--ハンバーガーメニュー用の記述-->
+            <input type="checkbox" id="toggle" class="btn_hide">
+            <label for="toggle" class="header_nav_btn"><span></span></label>
+            <!--ページ遷移のリンク-->
+            <ul class="header_nav_right">
+                <li><a href="">企画一覧</a></li>
+                <li><a href="timetable.html">タイムテーブル</a></li>
+                <li><a href="gallery.html">オンライン展示会</a></li>
+                <li><a href="">配信</a></li>
+            </ul>
+        </div>
+        <div class="gras">
+            <img class="gras_left" src="assets/image/gras.png">
+            <img class="gras_right" src="assets/image/gras.png">
+        </div>
+        <a href="#" class="page_top"><div class="page_top_content"></div><span></span></a>
+        <div class="about">
+            <!--本文-->
+            <!--この中に記述を追加すると装飾が自動で入ります-->
+            <div class="other">
+                <h1>キャンパスフェスティバル2022</h1>
+                <p>N･S高 大宮キャンパス</p>
+            </div>
+            <div class="other">
+                <h1>タイムテーブル</h1>
+                <p>ここには主にステージ,マリカー大会,スマブラ大会,ONEDの四つのタームテーブルが載っています。<br>
+                    ※[13:00]などの時刻は、予定のためでそこまで正確な時間ではなく、ずれる可能性もあります。<br>
+                    下にある簡易テーブルからタイムテーブルに飛ぶことができます<br>
+                </p>
+                <table class="now_time">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <td colspan="4" class="not"><div id="Current_time"></div></td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta=""></th>
+                            <td class="content_time"><a href="#stage">ステージ</a></td>
+                            <td class="content_time"><a href="#cart">マリカ大会</a></td>
+                            <td class="content_time"><a href="#sumabura">スマブラ大会</a></td>
+                            <td class="content_time"><a href="#ONED">ONED</a></td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta="13:00"></th>
+                            <td class="content_time_1"><a href="#stage_13">content</a></td>
+                            <td class="content_time_1"><a href="#cart_13">content</a></td>
+                            <td class="content_time_1 not">not</td>
+                            <td class="content_time_1"><a href="#ONED_13">content</a></td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta="14:00"></th>
+                            <td class="content_time_2"><a href="#stage_14">content</a></td>
+                            <td class="content_time_2"><a href="#cart_14">content</a></td>
+                            <td class="content_time_2 not">not</td>
+                            <td class="content_time_2"><a href="#ONED_14">content</a></td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta="15:00"></th>
+                            <td class="content_time_3"><a href="#stage_15">content</a></td>
+                            <td class="content_time_3 not">not</td>
+                            <td class="content_time_3"><a href="#sumabura_15">content</a></td>
+                            <td class="content_time_3 not">not</td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta="16:00"></th>
+                            <td class="content_time_4"><a href="#stage_16">content</a></td>
+                            <td class="content_time_4 not">not</td>
+                            <td class="content_time_4"><a href="#sumabura_16">content</a></td>
+                            <td class="content_time_4"><a href="#ONED_16">content</a></td>
+                        </tr>
+                        <tr>
+                            <th class="time_layout" time_deta="17:00"></th>
+                            <td class="content_time_5"><a href="#stage_17">content</a></td>
+                            <td class="content_time_4 not">not</td>
+                            <td class="content_time_4"><a href="#sumabura_17">content</a></td>
+                            <td class="content_time_4 not">not</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--ステージのタイムテーブルの部分です-->
+            <div id="timetable">
+                <div class="main" id="stage">
+                    <h2>ステージ</h2>
+                    <div class="main" style="padding: 0;margin: 0;border-left: none;border-right: none;border-radius: 0;">
+                        <!--iframeにてタイムテーブルの表示-->
+                        <iframe src="assets/time_deta/time_deta_stage.html" name="time_iframe" style="border: none;margin: 0; width: 100%;height: 2672px;"></iframe>
+                    </div>
+                    <div id="stage_13"></div>
+                    <div id="stage_14"></div>
+                    <div id="stage_15"></div>
+                    <div id="stage_16"></div>
+                    <div id="stage_17"></div>
+                </div>
+                <!--マリオカートのタイムテーブルの部分です-->
+                <div class="main" id="cart">
+                    <h2>マリオカート大会</h2>
+                    <div class="main" style="padding: 0;margin: 0;border-left: none;border-right: none;border-radius: 0;">
+                        <!--iframeにてタイムテーブルの表示-->
+                        <iframe src="assets/time_deta/time_deta_cart.html" name="time_iframe" style="border: none;margin: 0; width: 100%;height: 840px;"></iframe>
+                    </div>
+                    <div id="cart_13"></div>
+                    <div id="cart_14"></div>
+                    <div id="cart_15"></div>
+                    <div id="cart_16"></div>
+                    <div id="cart_17"></div>
+                </div>
+                <!--スマブラのタイムテーブルの部分です-->
+                <div class="main" id="sumabura">
+                    <h2>スマブラ大会</h2>
+                    <div class="main" style="padding: 0;margin: 0;border-left: none;border-right: none;border-radius: 0;">
+                        <!--iframeにてタイムテーブルの表示-->
+                        <iframe src="assets/time_deta/time_deta_sumabura.html" name="time_iframe" style="border: none;margin: 0; width: 100%;height: 1020px;"></iframe>
+                    </div>
+                    <div id="sumabura_13"></div>
+                    <div id="sumabura_14"></div>
+                    <div id="sumabura_15"></div>
+                    <div id="sumabura_16"></div>
+                    <div id="sumabura_17"></div>
+                </div>
+                <!--ONEDのタイムテーブルの部分です-->
+                <div class="main" id="ONED">
+                    <h2>ONED</h2>
+                    <div class="main" style="padding: 0;margin: 0;border-left: none;border-right: none;border-radius: 0;">
+                        <!--iframeにてタイムテーブルの表示-->
+                        <iframe src="assets/time_deta/time_deta_ONED.html" name="time_iframe" style="border: none;margin: 0; width: 100%;height: 994px;"></iframe>
+                    </div>
+                    <div id="ONED_13"></div>
+                    <div id="ONED_14"></div>
+                    <div id="ONED_15"></div>
+                    <div id="ONED_16"></div>
+                    <div id="ONED_17"></div>
+                </div>
+            </div>
+        </div>
+        <!--フッター-->
+        <footer>
+            <div class="footer_about">
+                <div class="footer_img">
+                    <img class="footer_img_left" src="assets/image/footer_img_left.png">
+                    <img class="footer_img_right" src="assets/image/footer_img_right.png">
+                </div>
+                <div class="footer_msg">
+                    <p>大宮キャンフェス2022</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+

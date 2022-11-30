@@ -133,6 +133,12 @@ div[column] div.main{
     margin: 0 auto;
 }
 
+/* スムーススクロール */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 /* PC用レイアウト */
 @media screen and (min-width:960px){
 }

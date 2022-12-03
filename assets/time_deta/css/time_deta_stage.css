@@ -3,13 +3,15 @@
     margin: 0;
     padding: 0;
 }
+
 .time_table {
     width: calc(100vw - calc(100vw - 100%));
     background-color: #fffffd;
     display: flex;
     position: relative;
 }
-.time_table::before ,
+
+.time_table::before,
 .time_table::after {
     position: absolute;
     top: 100px;
@@ -18,55 +20,69 @@
     background-color: #fffffd;
     border-radius: 20px;
 }
+
 .time_table::before {
     content: "A";
     left: 5%;
 }
+
 .time_table::after {
     content: "B";
     right: 5%;
 }
+
 .content_time {
     width: 10%;
     min-width: 150px;
 }
+
 .time {
     width: 100%;
     height: 46px;
 }
+
 .time time::after {
     content: attr(datetime)"";
     color: #5f7037;
     font-size: 30px;
     width: 50px;
 }
+
 .time:not(:last-child) {
     border-top: solid 2px #5f7037;
 }
+
 .time:first-child {
     margin-top: 10px;
 }
+
 .time:nth-child(2) {
     margin-top: 550px;
 }
+
 .time:nth-child(3) {
     margin-top: 827px;
 }
+
 .time:nth-child(4) {
     margin-top: 555px;
 }
+
 .time:last-child {
     border-bottom: solid 2px #5f7037;
     margin-top: 480px;
     margin-bottom: 10px;
 }
+
 .right {
     text-align: right;
 }
+
 .incense_table {
     width: 80%;
     position: relative;
 }
+
 .incense_table::before {
     content: "";
     position: absolute;
@@ -79,26 +95,31 @@
     transform: translateX(50%);
     z-index: 1;
 }
+
 #top {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100px;
 }
+
 #top span::after {
     content: "op";
     margin-left: 20px;
 }
+
 #end {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
 }
+
 #end span::after {
     content: "ED";
     margin-left: 20px;
 }
+
 #main_content {
     position: absolute;
     top: 100px;
@@ -107,17 +128,20 @@
     /* タイムテーブル内、スマホ表示時に縦幅を上げて解決するためにCSS変数を設定→margin-topもずらすのきついだろ */
     --magnification: 1;
 }
-#top ,
-#end ,
+
+#top,
+#end,
 #main_content {
     z-index: 3;
     text-align: center;
     font-size: 25px;
 }
-#top span::before ,
+
+#top span::before,
 #end span::before {
-    content: "[ "attr(time_deta)"" " ]";
+    content: "[ " attr(time_deta)"" " ]";
 }
+
 .content {
     margin-top: 20px;
     width: 62%;
@@ -126,73 +150,99 @@
     background-color: #fffffd;
     border-radius: 15px;
 }
+
 .content:hover {
     width: calc(62% + 20px);
 }
+
 .mc_content {
-    background:#D8C8AE;
+    background: #D8C8AE;
     width: 100%;
     color: #fffffd;
 }
+
 article .mc_content {
     height: calc(50px * var(--magnification));
 }
+
 .size_2 {
     height: calc(100px * var(--magnification));
 }
+
 .size_2:hover {
     height: calc(120px * var(--magnification));
-} 
+}
+
 .size_3 {
     height: calc(150px * var(--magnification));
 }
+
 .size_3:hover {
     height: calc(170px * var(--magnification));
-} 
+}
+
 .size_4 {
     height: calc(200px * var(--magnification));
 }
+
 .size_4:hover {
     height: calc(220px * var(--magnification));
-} 
+}
+
 .content_detail {
     text-align: center;
 
 }
+
 .table_title {
     font-size: 25px;
     position: relative;
 }
+
 .table_title::before {
     margin-right: 5px;
-    content: "[ "attr(time_deta)"" " ]";
+    content: "[ " attr(time_deta)"" " ]";
     color: #b0bb99;
     font-size: 25px;
 }
+
 .table_title span::before {
     margin-right: 10px;
     content: "出演者 :";
     font-size: 20px;
     color: #b0bb99;
 }
-@media screen and (max-width:800px) {
-    .table_title span::before,
-    .table_content::before {
+
+@media screen and (max-width:720px) {
+
+    h2.table_title span::before {
         content: "";
     }
-    .table_title::before {
+
+    p.table_content::before {
+        content: "";
+    }
+
+    h2.table_title::before {
         margin-right: 0px;
     }
-    .table-title {
+
+    h2.table_title {
         font-size: 14px;
         line-height: 24px;
     }
-    .Webcast::after {
+
+    p.table_content {
+        font-size: 12px;
+    }
+
+    p.Webcast::after {
         font-size: 10px;
         margin-left: 0px;
         content: "🌐";
     }
 }
+
 .table_title::after {
     content: "";
     position: absolute;
@@ -203,89 +253,113 @@ article .mc_content {
     bottom: 0;
     transform: translateX(-50%);
 }
+
 .mc_title::before {
-    content: "[ "attr(time_deta)"" " ]";
+    content: "[ " attr(time_deta)"" " ]";
     margin-right: 10px;
 }
+
 .mc_title {
     font-size: 25px;
     text-align: center;
 }
+
 .mc_title::after {
     margin-left: 10px;
     content: "MC";
 }
+
 .Bstage {
     margin-right: 0;
     margin-left: auto;
 }
+
 article:first-child {
     margin-top: 20px;
 }
+
 .table_content {
     font-size: 20px;
 }
+
 .table_content::before {
     content: "content:";
     font-size: 15px;
     color: #b0bb99;
 }
+
 .Webcast::after {
     margin-left: 10px;
     content: "配信有";
     font-size: 15px;
     color: #b0bb99;
 }
+
 article {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .table_title span br {
     display: none;
 }
+
 .line_content {
     width: 80%;
 }
+
 @media screen and (max-width:1260px) {
-    .table_title ,
+
+    .table_title,
     .table_title::before {
         font-size: 20px;
     }
+
     .content_time {
         width: 100px;
         min-width: 100px;
     }
+
     .time {
         width: 100px;
         margin-left: 0;
         margin-right: 0;
     }
+
     .incense_table {
         width: calc(100% - 200px);
     }
+
     .line_content {
         width: 95%;
     }
 }
+
 @media screen and (max-width:900px) {
-    .table_title ,
+
+    .table_title,
     .table_content {
         font-size: 18px;
     }
+
     .table_title span br {
-        display:block;
+        display: block;
     }
+
     .table_title::before {
         font-size: 15px;
     }
+
     .table_title::after {
         width: 80%;
     }
+
     .content_time {
         min-width: 60px;
         width: 60px;
     }
+
     .time {
         width: 60px;
         margin-left: 0;
@@ -293,12 +367,15 @@ article {
         padding-top: 20px;
         height: 26px;
     }
+
     .time time::after {
         font-size: 20px;
     }
+
     .incense_table {
         width: calc(100% - 120px);
     }
+
     .content {
         margin-top: 20px;
         width: 80%;
@@ -307,6 +384,7 @@ article {
         background-color: #fffffd;
         border-radius: 15px;
     }
+
     .content:hover {
         width: calc(80% + 20px);
     }

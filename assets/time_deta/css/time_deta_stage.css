@@ -175,6 +175,24 @@ article .mc_content {
     font-size: 20px;
     color: #b0bb99;
 }
+@media screen and (max-width:800px) {
+    .table_title span::before,
+    .table_content::before {
+        content: "";
+    }
+    .table_title::before {
+        margin-right: 0px;
+    }
+    .table-title {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .Webcast::after {
+        font-size: 10px;
+        margin-left: 0px;
+        content: "🌐";
+    }
+}
 .table_title::after {
     content: "";
     position: absolute;

@@ -114,3 +114,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+@media screen and (max-width:900px) {
+    .block_total * {
+        font-size: 15px;
+    }
+}

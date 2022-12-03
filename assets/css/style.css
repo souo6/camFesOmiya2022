@@ -133,6 +133,21 @@ div[column] div.main{
     margin: 0 auto;
 }
 
+/* ページトップに戻る */
+
+.page_top {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-color: #fffffd;
+    border: solid 10px #5f7037;
+    border-radius: 25%;
+    right: 10px;
+    bottom: 20px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 60%);
+    z-index: 5;
+}
+
 /* スムーススクロール */
 html {
     scroll-behavior: smooth;

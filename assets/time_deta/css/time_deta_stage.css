@@ -20,11 +20,11 @@
 }
 .time_table::before {
     content: "A";
-    left: 100px;
+    left: 5%;
 }
 .time_table::after {
     content: "B";
-    right: 100px;
+    right: 5%;
 }
 .content_time {
     width: 10%;

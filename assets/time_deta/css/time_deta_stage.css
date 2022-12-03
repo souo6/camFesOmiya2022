@@ -104,13 +104,8 @@
     top: 100px;
     width: 100%;
     height: calc(100% - 200px);
-    /* タイムテーブル内、スマホ表示時に縦幅を上げて解決するためにCSS変数を設定 */
+    /* タイムテーブル内、スマホ表示時に縦幅を上げて解決するためにCSS変数を設定→margin-topもずらすのきついだろ */
     --magnification: 1;
-}
-@media screen and (max-width:600px) {
-    #main_content {
-        --magnification: 1.67;
-    }
 }
 #top ,
 #end ,
